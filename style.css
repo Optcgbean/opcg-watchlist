@@ -1,26 +1,27 @@
 /* Reset & Base */
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* White Theme Colors */
 :root {
-    --bg-primary: #0d1117;
-    --bg-secondary: #161b22;
-    --bg-tertiary: #21262d;
-    --text-primary: #e6edf3;
-    --text-secondary: #8b949e;
-    --text-muted: #6e7681;
-    --border: #30363d;
-    --accent: #58a6ff;
-    --accent-hover: #79c0ff;
-    --success: #3fb950;
-    --success-bg: rgba(63, 185, 80, 0.1);
-    --danger: #f85149;
-    --danger-bg: rgba(248, 81, 73, 0.1);
-    --warning: #d29922;
-    --card-hover: #1c2128;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f6f8fa;
+    --bg-tertiary: #eaeef2;
+    --text-primary: #1f2328;
+    --text-secondary: #566d78;
+    --text-muted: #8c96af;
+    --border: #d0dde6;
+    --accent: #0969da;
+    --accent-hover: #0550aa;
+    --success: #2e9440;
+    --success-bg: rgba(46, 160, 67, 0.1);
+    --danger: #d1242f;
+    --danger-bg: rgba(209, 36, 47, 0.1);
+    --warning: #d82f06;
+    --card-hover: #f3f4f6;
 }
 
 body {
@@ -54,7 +55,7 @@ header {
 h1 {
     font-size: 2rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--accent), #a371f7);
+    background: linear-gradient(135deg, var(--accent), #6c47d1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -106,7 +107,7 @@ h1 {
 
 .filter-btn.active {
     background: var(--accent);
-    color: var(--bg-primary);
+    color: #ffffff;
     border-color: var(--accent);
 }
 
@@ -182,7 +183,7 @@ th.sortable:hover {
 }
 
 th.sortable::after {
-    content: ' ↕';
+    content: ' ⏕';
     opacity: 0.3;
     font-size: 0.75rem;
 }
@@ -356,7 +357,6 @@ footer p {
     width: 8px;
     height: 8px;
 }
-
 ::-webkit-scrollbar-track {
     background: var(--bg-primary);
 }
@@ -365,7 +365,6 @@ footer p {
     background: var(--border);
     border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: var(--text-muted);
 }
