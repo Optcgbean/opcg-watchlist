@@ -3,74 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OPCG Watchlist Dashboard</title>
+    <title>OPCG Watchlist</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
             <div class="header-content">
-                <h1>🃏 OPCG Watchlist</h1>
+                <h1>OPCG Watchlist</h1>
                 <div class="meta">
-                    <span class="timestamp">Last Updated: <span id="lastUpdated">Loading...</span></span>
-                    <span class="currency">Currency: HKD (¥ × 5.8)</span>
+                    <span class="timestamp">Last Updated: April 16, 2025 09:15 HKT</span>
+                    <span class="currency">HKD (SGD × 5.8)</span>
                 </div>
-            </div>
-            <div class="filters">
-                <button class="filter-btn active" data-filter="all">All Cards</button>
-                <button class="filter-btn" data-filter="gainers">🔥 Gainers (>5%)</button>
-                <button class="filter-btn" data-filter="losers">📉 Losers (<-5%)</button>
             </div>
         </header>
 
-        <main>
-            <div class="stats-bar">
-                <div class="stat">
-                    <span class="stat-label">Total Cards</span>
-                    <span class="stat-value" id="totalCards">15</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-label">Avg PSA10 Ask</span>
-                    <span class="stat-value" id="avgAsk">Calculating...</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-label">Hot Card</span>
-                    <span class="stat-value hot" id="hotCard">Scanning...</span>
-                </div>
-            </div>
-
-            <div class="table-container">
-                <table id="watchlistTable">
-                    <thead>
-                        <tr>
-                            <th class="sortable" data-sort="name">Card</th>
-                            <th class="sortable" data-sort="psa10">PSA10 Ask (HKD)</th>
-                            <th class="sortable" data-sort="sold1">Last Sold 1</th>
-                            <th class="sortable" data-sort="sold2">Last Sold 2</th>
-                            <th class="sortable" data-sort="sold3">Last Sold 3</th>
-                            <th class="sortable" data-sort="sold4">Last Sold 4</th>
-                            <th class="sortable" data-sort="change">24h Change</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tableBody">
-                        <!-- Data populated by JavaScript -->
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="empty-state" id="emptyState" style="display: none;">
-                <p>No cards match the current filter.</p>
-            </div>
-        </main>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Card</th>
+                        <th>Code</th>
+                        <th>PSA10 Ask</th>
+                        <th>Last 4 Sold</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="card-info"><span class="card-name">Luffy SEC-SPC Gold</span><span class="card-code">OP05-119</span></td>
+                        <td>OP05-119</td>
+                        <td class="price">$65,697</td>
+                        <td class="sold-price">$63,725 / $63,725 / $66,190 / $65,697</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="card-info"><span class="card-name">Luffy SEC-SPC Silver</span><span class="card-code">OP05-119</span></td>
+                        <td>OP05-119</td>
+                        <td class="price">$29,667</td>
+                        <td class="sold-price">$21,785 / $29,186 / $27,208 / $28,936</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="card-info"><span class="card-name">Luffy SR</span><span class="card-code">ST21-014</span></td>
+                        <td>ST21-014</td>
+                        <td class="price">$1,752</td>
+                        <td class="sold-price">$1,734 / $1,653 / $1,653 / $1,740</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="card-info"><span class="card-name">Luffy P Dec 2025</span><span class="card-code">P-106</span></td>
+                        <td>P-106</td>
+                        <td class="price">$1,206</td>
+                        <td class="sold-price">$1,061 / $1,050 / — / —</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="card-info"><span class="card-name">Luffy L BVB Matchday</span><span class="card-code">ST13-003</span></td>
+                        <td>ST13-003</td>
+                        <td class="price">$7,424</td>
+                        <td class="sold-price">— / — / — / —</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="card-info"><span class="card-name">Luffy SEC-SP Comic</span><span class="card-code">OP13-118</span></td>
+                        <td>OP13-118</td>
+                        <td class="price">$16,750</td>
+                        <td class="sold-price">$14,570 / $14,628 / $14,483 / $14,570</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td class="card-info"><span class="card-name">Luffy SR-P</span><span class="card-code">ST01-012</span></td>
+                        <td>ST01-012</td>
+                        <td class="price">$34,510</td>
+                        <td class="sold-price">$34,510 / $34,116 / — / —</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td class="card-info"><span class="card-name">Luffy SEC-SP Comic</span><span class="card-code">OP09-119</span></td>
+                        <td>OP09-119</td>
+                        <td class="price">$12,406</td>
+                        <td class="sold-price">$12,308 / $12,308 / $12,656 / $12,406</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td class="card-info"><span class="card-name">Luffy SEC-SP Anime 25th</span><span class="card-code">EB02-061</span></td>
+                        <td>EB02-061</td>
+                        <td class="price">$17,093</td>
+                        <td class="sold-price">$17,290 / $17,342 / $17,342 / —</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td class="card-info"><span class="card-name">Luffy L LA Dodgers</span><span class="card-code">EB02-010</span></td>
+                        <td>EB02-010</td>
+                        <td class="price">$21,535</td>
+                        <td class="sold-price">$21,240 / $19,807 / $19,807 / $19,737</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td class="card-info"><span class="card-name">DON!! Luffy Champ 2023</span><span class="card-code">OPCD-015</span></td>
+                        <td>OPCD-015</td>
+                        <td class="price">$17,093</td>
+                        <td class="sold-price">$16,257 / $15,370 / $14,778 / —</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td class="card-info"><span class="card-name">Luffy SR Jump 2025 Gift</span><span class="card-code">ST01-012</span></td>
+                        <td>ST01-012</td>
+                        <td class="price">$1,873</td>
+                        <td class="sold-price">$1,873 / $1,897 / — / —</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td class="card-info"><span class="card-name">Luffy SR Champ Prize</span><span class="card-code">ST10-006</span></td>
+                        <td>ST10-006</td>
+                        <td class="price">$98,751</td>
+                        <td class="sold-price">$88,885 / $92,835 / $74,083 / $78,996</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td class="card-info"><span class="card-name">Luffy SR-P Luffy Get</span><span class="card-code">OP07-109</span></td>
+                        <td>OP07-109</td>
+                        <td class="price">$59,183</td>
+                        <td class="sold-price">$52,867 / $52,867 / $54,346 / —</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td class="card-info"><span class="card-name">Luffy SEC-RSP Red Comic</span><span class="card-code">OP13-118</span></td>
+                        <td>OP13-118</td>
+                        <td class="price">$116,023</td>
+                        <td class="sold-price">— / — / — / —</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <footer>
-            <p>Data sourced from SNKRDUNK • Updates daily at 8:37 AM HKT</p>
-            <p class="disclaimer">For investment tracking purposes only. Not financial advice.</p>
+            <p>Data source: SNKRDUNK</p>
+            <p class="disclaimer">Prices are for reference only. Market conditions may vary.</p>
         </footer>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
